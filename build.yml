@@ -57,7 +57,8 @@ android:
   - sdcard
   - calendar
   version: 4.2.2
-  apikey: GoogleApiKey
+  apikey: "AIzaSyBzz8FdVvrXZ2_zutADSb82DXj3zi0sppA"
+  mapping: enabled
 
 wp:
   productid: 'fd55c4d0-51fa-012e-7844-3caec51bd50e'
