@@ -8,7 +8,7 @@ class AsyncDownloadFileController < Rho::RhoController
     @@file_name = File.join(Rho::RhoApplication::get_base_app_path(), 'test.jpg')
 
     Rho::AsyncHttp.download_file(
-      :url => 'http://www.rhomobile.com/wp-content/themes/rhomobile_theme/images/misc/ruby_app.jpg',
+      :url => 'http://www.primped.com.au/wp-content/uploads/2013/02/BrigitteBardotBedheadHair.jpg',
       :filename => @@file_name,
       :headers => {},
       :callback => (url_for :action => :httpdownload_callback),

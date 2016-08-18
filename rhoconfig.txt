@@ -23,6 +23,11 @@ rhobundle_zip_pwd = ''
 # Use Persistent Storage in Blackberry for storing files instead of SD card
 use_persistent_storage = 0
 
+
+# from June 2016 Apple Store not approve application with native curl
+ios_net_curl = false
+ios_direct_local_requests = true
+
 # Rhodes runtime properties
 MinSeverity  = 1
 LogToOutput = 1
