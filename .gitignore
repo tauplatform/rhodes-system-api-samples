@@ -9,3 +9,17 @@ rhosimulator/*
 rholog-*
 *.ncb
 extensions/*/ext/*/platform/*/build/
+project/iphone/
+
+extensions/*/*/*/generated/
+extensions/*/*/*/*/generated/
+extensions/*/ext/*/platform/iphone/build/
+extensions/*/ext/iphone/build/
+extensions/*/ext/platform/iphone/build/
+
+# XCode 4 specific files
+*.xcworkspace
+xcuserdata
+
+*/project.xcworkspace/*
+*/xcuserdata/*
