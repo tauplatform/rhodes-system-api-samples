@@ -25,9 +25,12 @@ use_persistent_storage = 0
 
 
 # from June 2016 Apple Store not approve application with native curl
-ios_net_curl = false
-ios_direct_local_requests = true
+ios_net_curl = 0
+ios_direct_local_requests = 1
 
+ios_use_WKWebView = 0
+
+#net_trace = 1
 # Rhodes runtime properties
 MinSeverity  = 1
 LogToOutput = 1

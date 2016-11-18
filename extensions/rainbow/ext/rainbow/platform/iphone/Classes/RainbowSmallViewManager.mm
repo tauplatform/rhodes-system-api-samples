@@ -42,8 +42,7 @@ static RainbowEffectView *view = NULL;
 		[self closeViewCommand:nil];
 	}
 	view = [[RainbowEffectView alloc] initWithFrame:CGRectMake(20,20,280,100)];
-	UIWebView* wv = (UIWebView*)RhoNativeViewManager::getWebViewObject(-1);
-	wv = [[wv subviews] objectAtIndex:0];
+	UIView* wv = (UIView*)RhoNativeViewManager::getWebViewObject(-1);
 	[wv addSubview:view];
 	[wv setNeedsDisplay];
 }

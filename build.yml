@@ -20,10 +20,10 @@ version: 1.0.7
 vendor: rhomobile
 iphone: 
   emulator: 5.0
-  sdk: iphonesimulator10.0
+  sdk: iphonesimulator10.1
   codesignidentity: ""
   entitlements: ""
-  extensions: ["barcode", "rainbow", "digest", "digest-md5", "digest-sha1", "pdf-writer", "thread", "nlist", "digest-sha2", "openssl.so", "openssl", "ezcrypto", "rawsensors", "audiocapture", "videocapture"]
+  extensions: ["signature", "barcode", "rainbow", "digest", "digest-md5", "digest-sha1", "pdf-writer", "thread", "nlist", "digest-sha2", "openssl.so", "openssl", "ezcrypto", "rawsensors", "audiocapture", "videocapture"]
   entitlements_file: "./production/Entitlements.plist"
   configuration: Debug
   http_connection_domains: ["primped.com.au"]
