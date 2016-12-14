@@ -149,6 +149,11 @@ Device capabilities:
     <li><a href="DetectConnection">Detect network connection status</a></li>
 <% end %>
 
+<% if System::get_property('platform') == 'APPLE' or System::get_property('platform') == 'ANDROID' %>
+    <li><a href="Clipboard">Device Clipboard access</a></li>
+<% end %>
+
+
      
 <li><a href="Metadata">Metadata Test</a></li>  
 <li><a href="GeoCoding">GeoCoding Example</a></li>

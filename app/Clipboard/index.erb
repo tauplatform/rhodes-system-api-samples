@@ -1,0 +1,28 @@
+<div data-role="page">
+
+  <div data-role="content">
+
+<b>set Clipboard to string:</b><br>
+
+<form id="set_clipboard" 
+   method="POST" 
+   action="<%=url_for(:action => 'set_clipboard')%>" selected="true"> 
+
+  String :  <input id="text" type="text" name="text" value =""></input><br>
+  <br>
+  <a href="#" onclick="document.forms[0].submit(); return false;"><b>Set Clipboard content to this string</b></a>
+</form>
+
+<br>
+<%= link_to 'Clear Clipboard', { :action => :clear_clipboard }%><br>
+
+<br><br>
+<b>Clipboard :</b><br>
+<b>hasText:</b> <%=Rho::Clipboard.hasText.to_s%><br>
+<b>getText:</b> <%=Rho::Clipboard.getText.to_s%><br>
+<br>
+
+
+</div>
+</div>
+
