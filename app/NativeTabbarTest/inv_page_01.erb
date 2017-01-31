@@ -1,0 +1,26 @@
+<div class="toolbar">
+  <h1 id="pageTitle">Page #01</h1>
+</div>
+
+<br>
+<b>Invisible TabBar page 01</b>
+<br>
+<INPUT type="button" value="Switch to 02" name="button1" onClick="to02();">
+<br>
+<INPUT type="button" value="Switch to 03" name="button2" onClick="to03();">
+<br>
+<li><%= link_to "No bar and return to TabBar test page", :action => :set_no_bar %></li>
+
+<script type="text/javascript">
+
+function to02() {
+  $.get('/app/NativeTabbarTest/invisible_switch_to_02', {});
+  return false;
+}
+
+function to03() {
+  $.get('/app/NativeTabbarTest/invisible_switch_to_03', {});
+  return false;
+}
+
+</script>

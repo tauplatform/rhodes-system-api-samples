@@ -21,6 +21,27 @@ class NativeTabbarTestController < Rho::RhoController
     render :action => :index, :back => '/app'
   end
 
+  def set_invisible_tabbar
+      tabbar = [
+        {:label => 'INV1', :action => '/app/NativeTabbarTest/inv_page_01', :icon => '/public/images/bar/sync_btn.png',    :reload => false},
+        {:label => 'INV2', :action => '/app/NativeTabbarTest/inv_page_02', :icon => '/public/images/bar/sync_btn.png',    :reload => false},
+        {:label => 'INV3', :action => '/app/NativeTabbarTest/inv_page_03', :icon => '/public/images/bar/sync_btn.png',    :reload => false},
+      ]
+      Rho::NativeTabbar.create(tabbar, {:invisibleTabControl => true})
+  end
+
+  def invisible_switch_to_01
+      Rho::NativeTabbar.switch_tab(0)
+  end
+
+  def invisible_switch_to_02
+      Rho::NativeTabbar.switch_tab(1)
+  end
+
+  def invisible_switch_to_03
+      Rho::NativeTabbar.switch_tab(2)
+  end
+
   def set_tabbar
     save_location
     tabbar = [
