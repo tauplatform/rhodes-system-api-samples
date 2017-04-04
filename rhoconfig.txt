@@ -52,6 +52,9 @@ enable_screen_zoom = 1
 logserver = 'http://rhologs.heroku.com'
 logname=sas
 
+splash_screen='zoom;delay=3'
+
+
 # debug_host = '127.0.0.1'
 # debug_port = 9000
 
