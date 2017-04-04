@@ -20,7 +20,7 @@ version: 1.0.7
 vendor: rhomobile
 iphone: 
   emulator: 5.0
-  sdk: iphonesimulator10.1
+  sdk: iphonesimulator10.2
   codesignidentity: ""
   entitlements: ""
   extensions: ["signature", "barcode", "rainbow", "digest", "digest-md5", "digest-sha1", "pdf-writer", "thread", "nlist", "digest-sha2", "openssl.so", "openssl", "ezcrypto", "rawsensors", "audiocapture", "videocapture"]
