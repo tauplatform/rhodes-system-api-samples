@@ -1,7 +1,7 @@
 ---
-#app_type: rhoelements 
+#app_type: rhoelements
 name: rhodes-system-api-samples
-capabilities: 
+capabilities:
 - gps
 - pim
 - camera
@@ -18,7 +18,7 @@ bbver: 5.0
 applog: rholog.txt
 version: 1.0.7
 vendor: rhomobile
-iphone: 
+iphone:
   emulator: 5.0
   sdk: iphonesimulator10.2
   codesignidentity: ""
@@ -26,7 +26,7 @@ iphone:
   extensions: ["signature", "barcode", "rainbow", "digest", "digest-md5", "digest-sha1", "pdf-writer", "thread", "nlist", "digest-sha2", "openssl.so", "openssl", "ezcrypto", "rawsensors", "audiocapture", "videocapture"]
   entitlements_file: "./production/Entitlements.plist"
   configuration: Debug
-  http_connection_domains: ["primped.com.au"]
+  http_connection_domains: ["amazonaws.com", "taulogservice.herokuapp.com"]
   production:
     app_plist_title: "SAS"
     app_plist_subtitle: "SAS"
@@ -34,7 +34,7 @@ iphone:
     app_plist_ipa_url: "www.sas.com/sas.ipa"
     ipa_itunesartwork_image: "./production/iTunesArtwork.png"
 
-#buildcfg: 'Debug'  
+#buildcfg: 'Debug'
 
 wm:
   extensions: ["digest", "digest-md5", "digest-sha1", "digest-sha2", "openssl.so", "openssl", "ezcrypto"]
@@ -66,7 +66,7 @@ wp:
 
 extensions: ["json", "rhoxml", "rhodes_translator", "rhoconnect-client"]
 
-symbian: 
+symbian:
   uid: 3780829575
 
 
