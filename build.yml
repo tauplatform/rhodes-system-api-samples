@@ -44,6 +44,7 @@ wm:
   #sdk: "Windows Mobile 6.5.3 Professional DTK (ARMV4I)"
   #emulator: "Windows Mobile 6.5.3 Professional Emulator"
   #use_shared_runtime: 1
+  extensions: ["webkit"]
 
 win32:
   extensions: ["digest", "digest-md5", "digest-sha1", "digest-sha2", "openssl.so", "openssl", "ezcrypto"]
