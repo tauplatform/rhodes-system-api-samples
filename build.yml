@@ -65,7 +65,7 @@ android:
 wp:
   productid: 'fd55c4d0-51fa-012e-7844-3caec51bd50e'
 
-extensions: ["json", "rhoxml", "rhodes_translator", "rhoconnect-client"]
+extensions: ["json", "rhoxml", "rhoconnect-client"]
 
 symbian:
   uid: 3780829575
