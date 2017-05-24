@@ -23,7 +23,7 @@ iphone:
   sdk: iphonesimulator10.2
   codesignidentity: ""
   entitlements: ""
-  extensions: ["signature", "barcode", "rainbow", "digest", "digest-md5", "digest-sha1", "pdf-writer", "thread", "nlist", "digest-sha2", "openssl.so", "openssl", "ezcrypto", "rawsensors", "audiocapture", "videocapture"]
+  extensions: ["signature", "barcode", "rainbow", "digest", "digest-md5", "digest-sha1", "pdf-writer", "thread", "nlist", "digest-sha2", "openssl.so", "openssl", "ezcrypto", "rawsensors", "mediacapture", "audiocapture", "videocapture"]
   entitlements_file: "./production/Entitlements.plist"
   configuration: Debug
   http_connection_domains: ["amazonaws.com", "taulogservice.herokuapp.com"]
@@ -53,7 +53,7 @@ bb:
   extensions: ["barcode"]
 
 android:
-  extensions: ["rainbow", "nlist", "nfc", "barcode", "digest", "digest-md5", "digest-sha1", "pdf-writer", "thread", "digest-sha2", "openssl.so", "openssl", "ezcrypto", "audiocapture", "gmaps"]
+  extensions: ["rainbow", "nlist", "nfc", "barcode", "digest", "digest-md5", "digest-sha1", "pdf-writer", "thread", "digest-sha2", "openssl.so", "openssl", "ezcrypto", "mediacapture", "audiocapture", "gmaps"]
   capabilities:
   - network_state
   - sdcard
