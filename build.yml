@@ -20,13 +20,14 @@ version: 1.0.7
 vendor: rhomobile
 iphone:
   emulator: 5.0
-  sdk: iphonesimulator10.2
+  sdk: iphonesimulator10.3
   codesignidentity: ""
   entitlements: ""
   extensions: ["signature", "barcode", "rainbow", "digest", "digest-md5", "digest-sha1", "pdf-writer", "thread", "nlist", "digest-sha2", "openssl.so", "openssl", "ezcrypto", "rawsensors", "mediacapture", "audiocapture", "videocapture"]
   entitlements_file: "./production/Entitlements.plist"
   configuration: Debug
   http_connection_domains: ["amazonaws.com", "taulogservice.herokuapp.com"]
+  ApplicationQueriesSchemes: ['skype']
   production:
     app_plist_title: "SAS"
     app_plist_subtitle: "SAS"
