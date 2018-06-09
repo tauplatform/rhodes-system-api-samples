@@ -199,11 +199,15 @@ class BluetoothChatController < Rho::RhoController
 
   def on_data_received
     puts 'BluetoothChat::on_data_received START'
+    received = ""
     while Rho::BluetoothSession.get_status($connected_device_name) > 0
        message = Rho::BluetoothSession.read_string($connected_device_name)
-       puts 'BluetoothChat::on_data_received MESSAGE='+message	
-       $history = $connected_device_name+':'+ message + '\n'+$history
-       execute_js('setHistory("'+$history+'");')
+       received = received + message
+    end
+    if received.length > 0
+        puts 'BluetoothChat::on_data_received MESSAGE='+received
+        $history = $connected_device_name+':'+ received + '\n'+$history
+        execute_js("setHistory('"+$history+"');")
     end
     puts 'BluetoothChat::on_data_received FINISH'
     if $is_blackberry

@@ -1,6 +1,6 @@
 ---
 #app_type: rhoelements
-name: rhodes-system-api-samples
+name: SAS
 capabilities:
 - gps
 - pim
@@ -77,3 +77,7 @@ excludedirs:
     - "**/*.mp4"
   bb6:
     - "**/*.mp4"
+
+
+#paths:
+#  extensions: ["/Users/MOHUS/tauplatform/rhoconnect-client.5-5-stable/ext", "/Users/MOHUS/tauplatform/rho-tau-extensions/libs"]

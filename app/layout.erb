@@ -4,25 +4,12 @@
 	<head>
 		<title>Tasklist</title>
 
-    <% is_bb6 = System::get_property('platform') == 'Blackberry' && (System::get_property('os_version').split('.')[0].to_i >= 6) %>
-
-    <% if !System::get_property('webview_framework') =~ /^MOTOROLA/ %>
-        <% if is_bb6 %>
-            <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
-        <% else %>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
-        <% end %>
-    <% end %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
         
-    <% if System::get_property('platform') == 'WP7' %>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <% end %>
         
     <% if System::get_property('platform') == 'APPLE' %>
         <link href="/public/css/iphone.css" type="text/css" rel="stylesheet"/>
     <% elsif System::get_property('platform') == 'ANDROID' %>
-        <link href="/public/css/android.css" type="text/css" rel="stylesheet"/>
-    <% elsif is_bb6 %>
         <link href="/public/css/android.css" type="text/css" rel="stylesheet"/>
     <% elsif System::get_property('platform') == 'Blackberry' %>
         <link href="/public/css/blackberry.css" type="text/css" rel="stylesheet"/>
