@@ -1,0 +1,139 @@
+<div>
+<p>Bluetooth Demo</p>
+
+My Name:
+<input id="id_name" type="text" name="id_name" value="<%= $device_name %>"  onChange="onDeviceNameChanged();"></input>
+<br>
+My Status:
+<input id="id_status" type="text" name="id_status" readonly value="<%= $current_status %>"></input>
+<br>
+
+
+<% if not $connected_device_name.nil? %>
+  <INPUT type="button" id="id_button1" value="Disconnect" name="id_button1" onClick="onDisconnect();">
+  <INPUT type="button" id="id_button2" value="Disconnect" name="id_button2" onClick="onDisconnect();">
+<% else %>
+  <INPUT type="button" id="id_button1" value="Connect as Server" name="id_button1" onClick="onConnectServer();">
+  <INPUT type="button" id="id_button2" value="Connect as Client" name="id_button2" onClick="onConnectClient();">
+<% if System::get_property('platform') == 'APPLE'  or
+      System::get_property('platform') == 'ANDROID' or
+      System::get_property('platform') == 'WINDOWS' %>
+  <br>
+   Custom Connection (without platform UI) : <br>
+  <INPUT type="button" id="id_button3" value="Custom Server connect" name="id_button3" onClick="onConnectCustomServer();"><br>
+  <INPUT type="button" id="id_button4" value="Connect to" name="id_button4" onClick="onConnectCustomClient();">
+  <input id="id_server_name" type="text" name="id_server_name" value="<%= $server_name %>"  onChange="onServerNameChanged();"></input>
+<% end %>
+<% end %>
+
+<br>
+
+
+History:<br>
+
+<TEXTAREA id="id_history" ROWS="10" type="text" name="id_history" readonly value="<%= $history %> " style="width:100%;"></TEXTAREA>
+
+<br>
+
+
+Message:<br>
+
+  <input id="id_message" type="text" name="id_message" value =""></input>
+  <INPUT type="button" id="id_button_send" value="Send" name="id_button_send" onClick="onMessageSend();">
+
+<br>
+
+
+
+<script type="text/javascript">
+
+function onDeviceNameChanged() {
+  $.get('/app/BluetoothDemo/on_change_name', { device_name: document.getElementById("id_name").value});
+  return false;
+}
+
+function onConnectServer() {
+  $.get('/app/BluetoothDemo/on_connect_server', {});
+  return false;
+}
+
+function onConnectClient() {
+  $.get('/app/BluetoothDemo/on_connect_client', {});
+  return false;
+}
+
+function onConnectCustomServer() {
+  $.get('/app/BluetoothDemo/on_connect_custom_server', {});
+  return false;
+}
+
+function onConnectCustomClient() {
+  $.get('/app/BluetoothDemo/on_connect_custom_client', {});
+  return false;
+}
+
+function onServerNameChanged() {
+  $.get('/app/BluetoothDemo/on_change_server_name', { device_name: document.getElementById("id_server_name").value});
+  return false;
+}
+
+function setServerName(name) {
+  document.getElementById("id_server_name").value = name;
+}
+
+
+function onDisconnect() {
+  $.get('/app/BluetoothDemo/on_disconnect', {});
+  return false;
+}
+
+function onMessageSend() {
+  $.get('/app/BluetoothDemo/on_send', { message: document.getElementById("id_message").value});
+  document.getElementById("id_message").value = "";
+  return false;
+}
+
+function setHistory(history) {
+  document.getElementById("id_history").value = history;
+}
+
+function setName(name) {
+  document.getElementById("id_name").value = name;
+}
+
+function setStatus(status) {
+  document.getElementById("id_status").value = status;
+}
+
+function setDeviceName(name) {
+  document.getElementById("id_name").value = name;
+}
+
+
+function setButtonCaption(caption) {
+  document.getElementById("id_button1").value = caption;
+  document.getElementById("id_button2").value = caption;
+}
+
+function restoreButtonCaption() {
+  document.getElementById("id_button1").value = "Connect as Server";
+  document.getElementById("id_button2").value = "Connect as Client";
+}
+
+function setCustomButtonCaption(caption) {
+  document.getElementById("id_button3").value = caption;
+  document.getElementById("id_button4").value = caption;
+}
+
+function restoreCustomButtonCaption() {
+  document.getElementById("id_button3").value = "Custom Server connect";
+  document.getElementById("id_button4").value = "Connect to";
+}
+
+function onUnload() {
+  $.get('/app/BluetoothDemo/on_close', {});
+  return false;
+}
+
+
+</script>

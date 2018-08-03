@@ -108,7 +108,8 @@ Device capabilities:
   <% end %>  
  
   <% if System::get_property('platform') != 'WP7' and System::get_property('device_name') != 'Win32' %>
-         <li><a href="BluetoothChat">Bluetooth</a></li>
+         <li><a href="BluetoothChat">Bluetooth old API</a></li>
+         <li><a href="BluetoothDemo">Bluetooth CommonAPI</a></li>
   <% else %>
   <li>
     <a href="<%= url_for :controller => :Settings, :action => :not_supported, :query => {:feature => 'Bluetooth'} %>">Bluetooth</a>
