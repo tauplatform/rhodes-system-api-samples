@@ -21,6 +21,7 @@ vendor: rhomobile
 iphone:
   emulator: 5.0
   sdk: latest
+  ARCHS_simulator : ["x86_64", "arm64"]
   #codesignidentity: ""
   #entitlements: ""
   extensions: ["signature", "barcode", "rainbow", "digest", "digest-md5", "digest-sha1", "pdf-writer", "thread", "nlist", "digest-sha2", "openssl.so", "openssl", "ezcrypto", "rawsensors", "mediacapture", "audiocapture", "videocapture"]
