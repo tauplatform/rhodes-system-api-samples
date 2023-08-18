@@ -75,15 +75,16 @@ class ImageController < Rho::RhoController
   end
 
   def camera_callback
+      puts "$$$ camera callback params = "+@params.to_s
     if @params['status'] == 'ok'
       #create image record in the DB
-      image = Image.new({'image_uri'=>Rho::Application.relativeDatabaseBlobFilePath(@params['image_uri'])})
+      image = Image.new({'image_uri'=>Rho::Application.relativeDatabaseBlobFilePath(@params['imageUri'])})
       image.save
       puts "new Image object: " + image.inspect
       if (((System::get_property('platform') == 'ANDROID') || (System::get_property('platform') == 'APPLE')) && ($use_new_api))
-           img_width = @params['image_width']
-           img_height = @params['image_height']
-           img_format = @params['image_format']
+           img_width = @params['imageWidth']
+           img_height = @params['imageHeight']
+           img_format = @params['imageFormat']
            puts "Captured Image  Size: #{img_width}x#{img_height}, Format: #{img_format} "
       end
     end  

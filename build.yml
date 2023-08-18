@@ -55,14 +55,15 @@ bb:
   extensions: ["barcode"]
 
 android:
-  extensions: ["bluetooth", "rainbow", "nlist", "nfc", "barcode", "digest", "digest-md5", "digest-sha1", "pdf-writer", "thread", "digest-sha2", "openssl.so", "openssl", "ezcrypto", "mediacapture", "audiocapture", "gmaps"]
+  #extensions: ["bluetooth", "rainbow", "nlist", "nfc", "barcode", "digest", "digest-md5", "digest-sha1", "pdf-writer", "thread", "digest-sha2", "openssl.so", "openssl", "ezcrypto", "mediacapture", "audiocapture", "gmaps"]
+  extensions: ["digest", "digest-md5", "digest-sha1", "pdf-writer", "thread", "digest-sha2", "openssl.so", "openssl", "ezcrypto", "mediacapture"]
   capabilities:
   - network_state
   - sdcard
   - calendar
   version: 4.4.2
-  apikey: "AIzaSyBzz8FdVvrXZ2_zutADSb82DXj3zi0sppA"
-  mapping: enabled
+  #apikey: "AIzaSyBzz8FdVvrXZ2_zutADSb82DXj3zi0sppA"
+  #mapping: enabled
 
 wp:
   productid: 'fd55c4d0-51fa-012e-7844-3caec51bd50e'
